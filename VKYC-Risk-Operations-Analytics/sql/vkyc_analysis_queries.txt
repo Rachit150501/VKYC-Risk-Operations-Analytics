@@ -1,0 +1,245 @@
+1. Total VKYC Cases :
+
+SELECT COUNT(*) AS total_cases
+FROM vkyc_data;
+
+
+2. Approval / Rejection / Pending Summary :
+
+SELECT
+    kyc_status,
+    COUNT(*) AS total_cases
+FROM vkyc_data
+GROUP BY kyc_status
+ORDER BY total_cases DESC;
+
+
+3. Approval Rate % :
+
+SELECT
+ROUND(
+    COUNT(CASE WHEN kyc_status='Approved' THEN 1 END) * 100.0 / COUNT(*),
+    2
+) AS approval_rate
+FROM vkyc_data;
+
+
+4. Fraud Detection Summary :
+
+SELECT
+    fraud_flag,
+    COUNT(*) AS total_cases
+FROM vkyc_data
+GROUP BY fraud_flag;
+
+
+5. Fraud Reason Analysis :
+
+SELECT
+    fraud_reason,
+    COUNT(*) AS fraud_cases
+FROM vkyc_data
+WHERE fraud_flag='Yes'
+GROUP BY fraud_reason
+ORDER BY fraud_cases DESC;
+
+
+6. Top 10 Cities by VKYC Volume :
+
+SELECT
+    city,
+    COUNT(*) AS total_cases
+FROM vkyc_data
+GROUP BY city
+ORDER BY total_cases DESC
+LIMIT 10;
+
+
+7. State-wise VKYC Distribution :
+
+SELECT
+    state,
+    COUNT(*) AS total_cases
+FROM vkyc_data
+GROUP BY state
+ORDER BY total_cases DESC;
+
+
+8. Top 10 Performing Agents (Approvals) :
+
+SELECT
+    agent_name,
+    COUNT(*) AS approvals
+FROM vkyc_data
+WHERE kyc_status='Approved'
+GROUP BY agent_name
+ORDER BY approvals DESC
+LIMIT 10;
+
+
+9. Slowest Agents by Avg Turnaround :
+
+SELECT
+    agent_name,
+    ROUND(AVG(turnaround_minutes),2) AS avg_turnaround
+FROM vkyc_data
+GROUP BY agent_name
+ORDER BY avg_turnaround DESC
+LIMIT 10;
+
+
+10. Rejection Root Cause Analysis
+
+SELECT
+    rejection_reason,
+    COUNT(*) AS rejection_count
+FROM vkyc_data
+WHERE kyc_status='Rejected'
+GROUP BY rejection_reason
+ORDER BY rejection_count DESC;
+
+
+11. Document Type Rejection Analysis :
+
+SELECT
+    document_type,
+    COUNT(*) AS rejected_cases
+FROM vkyc_data
+WHERE kyc_status='Rejected'
+GROUP BY document_type
+ORDER BY rejected_cases DESC;
+
+
+12. Document Type Approval Rate :
+
+SELECT
+    document_type,
+    COUNT(*) AS total_cases,
+    COUNT(CASE WHEN kyc_status='Approved' THEN 1 END) AS approved_cases,
+    ROUND(
+        COUNT(CASE WHEN kyc_status='Approved' THEN 1 END) * 100.0 / COUNT(*),
+        2
+    ) AS approval_rate
+FROM vkyc_data
+GROUP BY document_type
+ORDER BY approval_rate DESC;
+
+
+13. Network Quality Impact Analysis :
+
+SELECT
+    network_quality,
+    COUNT(*) AS total_cases,
+    COUNT(CASE WHEN kyc_status='Rejected' THEN 1 END) AS rejected_cases,
+    ROUND(AVG(turnaround_minutes),2) AS avg_turnaround
+FROM vkyc_data
+GROUP BY network_quality
+ORDER BY avg_turnaround DESC;
+
+
+14. Pending Cases Due to Poor Network :
+
+SELECT
+    customer_id,
+    customer_name,
+    city,
+    network_quality,
+    kyc_status
+FROM vkyc_data
+WHERE kyc_status='Pending'
+AND network_quality='Poor';
+
+
+15. SLA Breach Analysis (>30 mins) :
+
+SELECT
+    COUNT(*) AS sla_breach_cases
+FROM vkyc_data
+WHERE turnaround_minutes > 30;
+
+
+16. City-wise Approval Rate :
+
+SELECT
+    city,
+    COUNT(*) AS total_cases,
+    COUNT(CASE WHEN kyc_status='Approved' THEN 1 END) AS approved_cases,
+    ROUND(
+        COUNT(CASE WHEN kyc_status='Approved' THEN 1 END) * 100.0 / COUNT(*),
+        2
+    ) AS approval_rate
+FROM vkyc_data
+GROUP BY city
+ORDER BY approval_rate DESC;
+
+
+17. High Risk Customer Segmentation :
+
+SELECT
+    CASE
+        WHEN face_match_score < 70 THEN 'High Risk'
+        WHEN face_match_score BETWEEN 70 AND 85 THEN 'Medium Risk'
+        ELSE 'Low Risk'
+    END AS risk_level,
+    COUNT(*) AS total_customers
+FROM vkyc_data
+GROUP BY risk_level
+ORDER BY total_customers DESC;
+
+
+18. High Risk Fraud Cases :
+
+SELECT
+    customer_id,
+    customer_name,
+    city,
+    face_match_score,
+    fraud_flag
+FROM vkyc_data
+WHERE face_match_score < 70
+AND fraud_flag='Yes';
+
+
+19. Monthly VKYC Trend :
+
+SELECT
+    DATE_TRUNC('month', application_date) AS month,
+    COUNT(*) AS total_cases
+FROM vkyc_data
+GROUP BY month
+ORDER BY month;
+
+
+20. Agent Ranking Using Window Function :
+
+SELECT
+    agent_name,
+    COUNT(*) AS approvals,
+    RANK() OVER (ORDER BY COUNT(*) DESC) AS agent_rank
+FROM vkyc_data
+WHERE kyc_status='Approved'
+GROUP BY agent_name;
+
+
+21. Escalation Analysis :
+
+SELECT
+    escalation_flag,
+    COUNT(*) AS total_cases
+FROM vkyc_data
+GROUP BY escalation_flag;
+
+
+22. Income Band Approval Analysis :
+
+SELECT
+    customer_income_band,
+    COUNT(*) AS total_cases,
+    COUNT(CASE WHEN kyc_status='Approved' THEN 1 END) AS approved_cases,
+    ROUND(
+        COUNT(CASE WHEN kyc_status='Approved' THEN 1 END) * 100.0 / COUNT(*),
+        2
+    ) AS approval_rate
+FROM vkyc_data
+GROUP BY customer_income_band
+ORDER BY approval_rate DESC;
