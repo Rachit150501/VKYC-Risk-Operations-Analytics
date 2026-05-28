@@ -105,9 +105,7 @@ VKYC-Risk-Operations-Analytics
 
 ## Approval Rate Analysis
 
-![Approval Rate Analysis](./screenshots/Approval%20Rate%20Analysis.png)
-
----
+![Approval Rate Analysis](./screenshots/approval_rate_analysis.png)---
 
 ## City-wise Approval Performance
 
