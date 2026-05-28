@@ -104,42 +104,31 @@ VKYC-Risk-Operations-Analytics
 
 ## Approval Rate Analysis
 
-[Open Full Screenshot](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/approval_rate_analysis.png)
-
-![Approval Rate Analysis](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/approval_rate_analysis.png)
+![Approval Rate Analysis](./screenshots/Approval%20Rate%20Analysis.png)
 
 ---
 
 ## City-wise Approval Performance
 
-[Open Full Screenshot](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/city_wise_approval_performance.png)
-
-![City-wise Approval Performance](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/city_wise_approval_performance.png)
+![City-wise Approval Performance](./screenshots/City-wise%20Approval%20Performance.png)
 
 ---
 
 ## Network Quality Impact on VKYC
 
-[Open Full Screenshot](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/network_quality_impact_on_vkyc.png)
-
-![Network Quality Impact on VKYC](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/network_quality_impact_on_vkyc.png)
+![Network Quality Impact on VKYC](./screenshots/Network%20Quality%20Impact%20on%20VKYC.png)
 
 ---
 
 ## Rejection Reason Analysis
 
-[Open Full Screenshot](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/rejection_reason_analysis.png)
-
-![Rejection Reason Analysis](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/rejection_reason_analysis.png)
+![Rejection Reason Analysis](./screenshots/Rejection%20Reason%20Analysis.png)
 
 ---
 
 ## Top Performing Agents
 
-[Open Full Screenshot](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/top_performing_agents.png)
-
-![Top Performing Agents](https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics/blob/main/screenshots/top_performing_agents.png)
-
+![Top Performing Agents](./screenshots/Top%20Performing%20Agents.png)
 ---
 
 #  Skills Demonstrated
