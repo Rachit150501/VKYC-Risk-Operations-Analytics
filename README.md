@@ -144,17 +144,6 @@ VKYC-Risk-Operations-Analytics
 
 ---
 
-#  Relevant Roles
-
-* Data Analyst
-* Operations Analyst
-* Risk Analyst
-* MIS Executive
-* Business Analyst
-* Banking Operations Associate
-
----
-
 #  Author
 
 Rachit Bajpai
