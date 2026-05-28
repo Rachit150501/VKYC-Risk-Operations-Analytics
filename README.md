@@ -104,31 +104,31 @@ VKYC-Risk-Operations-Analytics
 
 ## Approval Rate Analysis
 
-![Approval Rate Analysis](./screenshots/Approval%20Rate%20Analysis.png)
+![Approval Rate Analysis](./VKYC-Risk-Operations-Analytics/screenshots/Approval%20Rate%20Analysis.png)
 
 ---
 
 ## City-wise Approval Performance
 
-![City-wise Approval Performance](./screenshots/City-wise%20Approval%20Performance.png)
+![City-wise Approval Performance](./VKYC-Risk-Operations-Analytics/screenshots/City-wise%20Approval%20Performance.png)
 
 ---
 
 ## Network Quality Impact on VKYC
 
-![Network Quality Impact on VKYC](./screenshots/Network%20Quality%20Impact%20on%20VKYC.png)
+![Network Quality Impact on VKYC](./VKYC-Risk-Operations-Analytics/screenshots/Network%20Quality%20Impact%20on%20VKYC.png)
 
 ---
 
 ## Rejection Reason Analysis
 
-![Rejection Reason Analysis](./screenshots/Rejection%20Reason%20Analysis.png)
+![Rejection Reason Analysis](./VKYC-Risk-Operations-Analytics/screenshots/Rejection%20Reason%20Analysis.png)
 
 ---
 
 ## Top Performing Agents
 
-![Top Performing Agents](./screenshots/Top%20Performing%20Agents.png)
+![Top Performing Agents](./VKYC-Risk-Operations-Analytics/screenshots/Top%20Performing%20Agents.png)
 ---
 
 #  Skills Demonstrated
