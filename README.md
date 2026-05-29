@@ -151,5 +151,3 @@ Rachit Bajpai
 🔗 GitHub Project:
 https://github.com/Rachit150501/VKYC-Risk-Operations-Analytics
 
-🔗 LinkedIn:
-(Add Your LinkedIn Profile)
