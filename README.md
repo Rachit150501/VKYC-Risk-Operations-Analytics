@@ -4,7 +4,7 @@ An end-to-end banking operations analytics project built using SQL, Excel, Power
 
 This project simulates real-world banking VKYC operations and demonstrates practical analytics workflows used by Operations, Risk, and Compliance teams.
 
----
+----
 
 #  Project Overview
 
