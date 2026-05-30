@@ -25,18 +25,18 @@ This project simulates real-world banking VKYC operations and demonstrates pract
 
 The project focuses on analysing:
 
-- ✅ VKYC approval & rejection trends
-- ✅ Operational performance & agent productivity
-- ✅ Customer verification analytics
-- ✅ Risk & fraud indicators
-- ✅ Network quality impact on verification outcomes
-- ✅ Monthly VKYC volumes & trend tracking
+-  VKYC approval & rejection trends
+-  Operational performance & agent productivity
+-  Customer verification analytics
+-  Risk & fraud indicators
+-  Network quality impact on verification outcomes
+-  Monthly VKYC volumes & trend tracking
 
 The dashboard helps track operational KPIs and provides actionable business insights for improving verification efficiency and compliance monitoring.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Tool | Purpose |
 |---|---|
